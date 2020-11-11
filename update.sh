@@ -41,7 +41,7 @@ curl -s https://raw.githubusercontent.com/521xueweihan/GitHub520/master/hosts >>
 sed -i '/GitHub520/d' $t
 
 # 更新hosts
-(echo -e "# `date '+%Y-%m-%d %T'`\n# 小贝塔自用，请勿商用\n\n" && sort -u $t) >$f&&rm $t&&echo "更新hosts成功"||echo "更新hosts失败..."
+(echo -e "# `date '+%Y-%m-%d %T'`\n# 自用，请勿商用\n\n" && sort -u $t) >$f&&rm $t&&echo "更新hosts成功"||echo "更新hosts失败..."
 
 # 推送到GitHub
 git add . && git commit -m " `date '+%Y-%m-%d %T'` " && git push && echo -e " `date '+%Y-%m-%d %T' ` 更新hosts成功"||echo "更新hosts失败..."
